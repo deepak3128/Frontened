@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div className="container mx-auto p-4">
+                    <header className="bg-black text-white p-4 flex justify-between items-center">
+                        <h1 className="text-xl font-bold">Hospital Management System</h1>
+                        <nav>
+                            <ul className="flex space-x-4">
+                                <li><a href="#" className="hover:underline">Queuing Model</a></li>
+                                <li><a href="#" className="hover:underline">Bed Availability</a></li>
+                                <li><a href="#" className="hover:underline">Inventory Management</a></li>
+                                <li><a href="#" className="hover:underline">City-wide Integration</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <main className="p-8">
+                        <section className="mb-8">
+                            <h2 className="text-2xl font-bold mb-2">Queuing Model for OPDs</h2>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h3 className="text-xl font-semibold">Patient Flow Management</h3>
+                                    <p className="text-gray-600 mb-4">Efficiently manage patient flow and wait times in outpatient departments.</p>
+                                    <div className="bg-white p-4 shadow rounded">
+                                        <p>Current Queue Length</p>
+                                        <p className="text-2xl font-bold">42</p>
+                                        <p>Estimated Wait Time</p>
+                                        <p className="text-2xl font-bold">1h 15m</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-semibold">Appointment Management</h3>
+                                    <p className="text-gray-600 mb-4">Schedule and manage OPD visits with ease.</p>
+                                    <div className="bg-white p-4 shadow rounded">
+                                        <p>Upcoming Appointments</p>
+                                        <p className="text-2xl font-bold">18</p>
+                                        <p>Appointment Slots Available</p>
+                                        <p className="text-2xl font-bold">27</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section className="mb-8">
+                            <h2 className="text-2xl font-bold mb-2">Bed Availability and Admission Management</h2>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h3 className="text-xl font-semibold">Bed Occupancy</h3>
+                                    <p className="text-gray-600 mb-4">Monitor and manage the availability of hospital beds.</p>
+                                    <div className="bg-white p-4 shadow rounded">
+                                        <p>Total Beds</p>
+                                        <p className="text-2xl font-bold">350</p>
+                                        <p>Beds Occupied</p>
+                                        <p className="text-2xl font-bold">278</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-semibold">Admission Management</h3>
+                                    <p className="text-gray-600 mb-4">Efficiently allocate beds based on patient priority and availability.</p>
+                                    <div className="bg-white p-4 shadow rounded">
+                                        <p>Pending Admissions</p>
+                                        <p className="text-2xl font-bold">12</p>
+                                        <p>Beds Available</p>
+                                        <p className="text-2xl font-bold">72</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section className="mb-8">
+                            <h2 className="text-2xl font-bold mb-2">Inventory Management</h2>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="p-4 border rounded shadow-sm">
+                                    <h3 className="text-lg font-semibold">Medicine Inventory</h3>
+                                    <p className="text-sm text-gray-600">Track the dispensation and consumption of medicines.</p>
+                                    <div className="mt-4">
+                                        <p className="text-sm">Total Medicines</p>
+                                        <p className="text-2xl font-bold">1,245</p>
+                                        <p className="text-sm text-gray-600">Previous month: 1,189</p>
+                                        <p className="text-sm mt-2">Medicines Dispensed (Last 7 days)</p>
+                                        <p className="text-2xl font-bold">784</p>
+                                    </div>
+                                </div>
+                                <div className="p-4 border rounded shadow-sm">
+                                    <h3 className="text-lg font-semibold">Medical Consumables</h3>
+                                    <p className="text-sm text-gray-600">Manage the inventory of medical consumables and supplies.</p>
+                                    <div className="mt-4">
+                                        <p className="text-sm">Total Consumables</p>
+                                        <p className="text-2xl font-bold">3,912</p>
+                                        <p className="text-sm mt-2">Consumables Used (Last 7 days)</p>
+                                        <p className="text-2xl font-bold">1,628</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section className="mb-8">
+                            <h2 className="text-xl font-bold mb-2">City-wide Integration</h2>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="p-4 border rounded shadow-sm">
+                                    <h3 className="text-lg font-semibold">Coordinated Healthcare</h3>
+                                    <p className="text-sm text-gray-600">Integrate the hospital-level solution with a city-wide healthcare system.</p>
+                                    <div className="mt-4">
+                                        <p className="text-sm">Patient Information Sharing</p>
+                                        <p className="text-sm text-gray-600">Enable the sharing of patient records across healthcare facilities.</p>
+                                        <p className="text-2xl font-bold mt-2">2,345</p>
+                                        <button className="mt-2 px-4 py-2 bg-black text-white rounded">View Shared Records</button>
+                                    </div>
+                                </div>
+                                <div className="p-4 border rounded shadow-sm">
+                                    <h3 className="text-lg font-semibold">Bed Availability Coordination</h3>
+                                    <p className="text-sm text-gray-600">Facilitate the coordination of patient transfers and referrals.</p>
+                                    <div className="mt-4">
+                                        <p className="text-2xl font-bold">89</p>
+                                        <button className="mt-2 px-4 py-2 bg-black text-white rounded">View Bed Availability</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    <footer className="text-center text-sm text-gray-600 mt-8">
+                        <p>© 2023 Hospital Management System. All rights reserved.</p>
+                        <div className="flex justify-center space-x-4 mt-2">
+                            <a href="#" className="text-gray-600 hover:text-black">Privacy Policy</a>
+                            <a href="#" className="text-gray-600 hover:text-black">Terms of Service</a>
+                        </div>
+                    </footer>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
